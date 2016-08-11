@@ -26,10 +26,33 @@ void ToggleStringTest()
 		printf("error!!!");
 	}
 }
+//Death, the Multiverse and Nothing
+//注意哪里换行哪里不换行
+void DeathTest()
+{
+	int size = 0; 
+	int i = 0;
+	int* pArray = NULL;
+
+	scanf("%d\n", &size);
+
+	pArray = (int*)malloc(size);
+	for (i = 0; i < size; i++)
+	{
+		scanf("%d", &pArray[i]);//不能换行
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		printf("%d\n", pArray[i] - 1);
+	}
+}
 
 int main()
 {
-	ToggleStringTest();
+	//ToggleStringTest();
 	
+	DeathTest();
+
 	return 0;
 }
