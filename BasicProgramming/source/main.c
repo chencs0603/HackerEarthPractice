@@ -36,7 +36,7 @@ void DeathTest()
 
 	scanf("%d\n", &size);
 
-	pArray = (int*)malloc(size);
+	pArray = (int*)malloc(sizeof(int)*size);//malloc的输入参数是字节数，不是元素个数
 	for (i = 0; i < size; i++)
 	{
 		scanf("%d", &pArray[i]);//不能换行
@@ -45,6 +45,12 @@ void DeathTest()
 	for (i = 0; i < size; i++)
 	{
 		printf("%d\n", pArray[i] - 1);
+	}
+
+	if (NULL != pArray)
+	{
+		free(pArray);
+		pArray = NULL;
 	}
 }
 
