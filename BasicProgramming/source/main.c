@@ -1,5 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "ToggleString.h"
+#include "PalindromicString.h"
+
 
 //²âÊÔ×ÖÄ¸·´×ª
 void ToggleStringTest()
@@ -53,12 +59,36 @@ void DeathTest()
 		pArray = NULL;
 	}
 }
+//²âÊÔ»ØÎÄ×Ö·û´®
+void PalindromicStrTest()
+{
+	bool bRet = false;
+	int size = 0;
+	char str[100];
+
+	scanf("%s", str);
+
+	size = strlen(str);
+
+	bRet = isPalindromicStr(str, size);
+
+	if (bRet)
+	{
+		printf("YES");
+	}
+	else
+	{
+		printf("NO");
+	}
+}
 
 int main()
 {
 	//ToggleStringTest();
 	
-	DeathTest();
+	//DeathTest();
+
+	PalindromicStrTest();
 
 	return 0;
 }

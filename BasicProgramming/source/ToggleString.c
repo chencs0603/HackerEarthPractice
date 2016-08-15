@@ -51,7 +51,7 @@ bool toggleStr(char* pOriginalStr, int originalStrLen, char* pRetStr, int* pRetS
 	int i;
 
 	//检测输入参数的合法性
-	if (NULL == pOriginalStr || originalStrLen <= 0)
+	if (NULL == pOriginalStr || 0 >= originalStrLen)
 	{
 		return false;
 	}
@@ -62,7 +62,7 @@ bool toggleStr(char* pOriginalStr, int originalStrLen, char* pRetStr, int* pRetS
 		*pRetStrLen = originalStrLen;
 		return true;
 	}
-
+	//遍历字符串，反转每个字母
 	for (i = 0; i < originalStrLen; i++)
 	{
 		if (toggleChar(pOriginalStr[i], &retChar))
