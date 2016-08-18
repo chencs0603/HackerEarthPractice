@@ -125,6 +125,27 @@ void ProductTest()
 	
 }
 
+//测试计算除数的个数
+void CountDivisorsTest()
+{
+	bool bRet;
+	int nMin, nMax, nDivisors;
+	int nCount;
+
+	scanf("%d %d %d", &nMin, &nMax, &nDivisors);
+
+	bRet = false;
+	bRet = countDivisors(nMin, nMax, nDivisors, &nCount);
+	if (bRet)
+	{
+		printf("%d", nCount);
+	}
+	else
+	{
+		printf("error");
+	}
+}
+
 int main()
 {
 	//ToggleStringTest();
@@ -134,6 +155,8 @@ int main()
 	//PalindromicStrTest();
 
 	//ProductTest();
+
+	CountDivisorsTest();
 
 	return 0;
 }
