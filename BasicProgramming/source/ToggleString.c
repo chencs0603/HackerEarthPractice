@@ -3,9 +3,9 @@
 #include "ToggleString.h"
 
 //判断是否为大写字母
-bool isUpperCase(char character)
+bool isUpperCase(char ch)
 {
-	if (character <= 'Z' && character >= 'A')
+	if (ch <= 'Z' && ch >= 'A')
 	{
 		return true;
 	}
@@ -14,10 +14,11 @@ bool isUpperCase(char character)
 		return false;
 	}
 }
+
 //判断是否为小写字母
-bool isLowerCase(char character)
+bool isLowerCase(char ch)
 {
-	if (character <= 'z' && character >= 'a')
+	if (ch <= 'z' && ch >= 'a')
 	{
 		return true;
 	}
@@ -26,53 +27,55 @@ bool isLowerCase(char character)
 		return false;
 	}
 }
+
 //转换字符，若为字母，大小写互转，若不为字母，不进行转换
-bool toggleChar(char originalChar, char* pRetChar)
+bool toggleChar(char cOriginal, char* pcToggle)
 {
-	if (isLowerCase(originalChar))
+	if (isLowerCase(cOriginal))
 	{
-		*pRetChar = originalChar - 0x20;
+		*pcToggle = cOriginal - 0x20;
 	}
-	else if (isUpperCase(originalChar))
+	else if (isUpperCase(cOriginal))
 	{
-		*pRetChar = originalChar + 0x20;
+		*pcToggle = cOriginal + 0x20;
 	}
 	else
 	{
-		*pRetChar = originalChar;
+		*pcToggle = cOriginal;
 	}
 	return true;
 }
+
 //转换字符串
-bool toggleStr(char* pOriginalStr, int originalStrLen, char* pRetStr, int* pRetStrLen)
+bool toggleStr(char* pszBuf, int nBufLen, char* pszToggle, int* pnToggleLen)
 {
 
-	char retChar;
+	char cToggle;
 	int i;
 
 	//检测输入参数的合法性
-	if (NULL == pOriginalStr || 0 >= originalStrLen)
+	if (NULL == pszBuf || 0 >= nBufLen)
 	{
 		return false;
 	}
 
 	//获取输出数据的长度
-	if (NULL == pRetStr)
+	if (NULL == pszToggle)
 	{
-		*pRetStrLen = originalStrLen;
+		*pnToggleLen = nBufLen;
 		return true;
 	}
 	//遍历字符串，反转每个字母
-	for (i = 0; i < originalStrLen; i++)
+	for (i = 0; i < nBufLen; i++)
 	{
-		if (toggleChar(pOriginalStr[i], &retChar))
+		if (toggleChar(pszBuf[i], &cToggle))
 		{
-			pRetStr[i] = retChar;
+			pszToggle[i] = cToggle;
 		}else{
 			return false;
 		}
 	}
 
-	*pRetStrLen = originalStrLen;
+	*pnToggleLen = nBufLen;
 	return true;	
 }

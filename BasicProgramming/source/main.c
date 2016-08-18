@@ -6,71 +6,80 @@
 #include "ToggleString.h"
 #include "PalindromicString.h"
 
-
 //测试字母反转
 void ToggleStringTest()
 {
 	//定义变量
-	char inputStr[MAX_STR_LEN];
-	int  inputStrLen;
-	char outputStr[MAX_STR_LEN];
-	int  outputStrLen;
-	bool bRet = false;
-	//获取输入字符串
-	scanf("%s", inputStr);
-	inputStrLen = strlen(inputStr);
-	//初始化参数
-	memset(outputStr, 0x00, MAX_STR_LEN);
-	outputStrLen = inputStrLen;
+	bool bRet;
+	char pszBuf[MAX_BUF_LEN];
+	int  nBufLen;
+	char pszToggle[MAX_BUF_LEN];
+	int  nToggleLen;
 
-	bRet = toggleStr(inputStr, inputStrLen, outputStr, &outputStrLen);
+	
+	//获取输入字符串
+	nBufLen = MAX_BUF_LEN;
+	memset(pszBuf, 0x00, nBufLen);
+	scanf("%s", pszBuf);
+	nBufLen = strlen(pszBuf);
+	//初始化参数
+	nToggleLen = MAX_BUF_LEN;
+	memset(pszToggle, 0x00, nToggleLen);
+
+	bRet = false;
+	bRet = toggleStr(pszBuf, nBufLen, pszToggle, &nToggleLen);
 	if (bRet)
 	{
-		printf("%s\n", outputStr);
+		printf("%s\n", pszToggle);
 	}
 	else{
 		printf("error!!!");
 	}
 }
+
 //Death, the Multiverse and Nothing
 //注意哪里换行哪里不换行
 void DeathTest()
 {
-	int size = 0; 
-	int i = 0;
-	int* pArray = NULL;
+	int* pnBuf;
+	int nBufLen;
+	int i;
 
-	scanf("%d\n", &size);
-
-	pArray = (int*)malloc(sizeof(int)*size);//malloc的输入参数是字节数，不是元素个数
-	for (i = 0; i < size; i++)
+	nBufLen = 0x00;
+	scanf("%d\n", &nBufLen);
+	//malloc的输入参数是字节数，不是元素个数
+	pnBuf = (int*)malloc(sizeof(int)*nBufLen);
+	for (i = 0; i < nBufLen; i++)
 	{
-		scanf("%d", &pArray[i]);//不能换行
+		scanf("%d", &pnBuf[i]);//不能换行
 	}
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nBufLen; i++)
 	{
-		printf("%d\n", pArray[i] - 1);
+		printf("%d\n", pnBuf[i] - 1);
 	}
 
-	if (NULL != pArray)
+	if (NULL != pnBuf)
 	{
-		free(pArray);
-		pArray = NULL;
+		free(pnBuf);
+		pnBuf = NULL;
 	}
 }
+
 //测试回文字符串
 void PalindromicStrTest()
 {
-	bool bRet = false;
-	int size = 0;
-	char str[100];
+	bool bRet;
+	char pszBuf[MAX_BUF_LEN];
+	int nBufLen;
 
-	scanf("%s", str);
-
-	size = strlen(str);
-
-	bRet = isPalindromicStr(str, size);
+	nBufLen = MAX_BUF_LEN;
+	memset(pszBuf, 0x00, nBufLen);
+	scanf("%s", pszBuf);
+	nBufLen = strlen(pszBuf);
+	
+	bRet = false;
+	bRet = isPalindromicStr(pszBuf, nBufLen);
 
 	if (bRet)
 	{
@@ -81,6 +90,7 @@ void PalindromicStrTest()
 		printf("NO");
 	}
 }
+
 //测试乘积
 void ProductTest()
 {
@@ -123,7 +133,7 @@ int main()
 
 	//PalindromicStrTest();
 
-	ProductTest();
+	//ProductTest();
 
 	return 0;
 }
