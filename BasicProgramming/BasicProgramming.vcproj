@@ -179,6 +179,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\source\Product.c"
+				>
+			</File>
+			<File
 				RelativePath=".\source\ToggleString.c"
 				>
 			</File>
@@ -190,6 +194,10 @@
 			>
 			<File
 				RelativePath=".\source\PalindromicString.h"
+				>
+			</File>
+			<File
+				RelativePath=".\source\Product.h"
 				>
 			</File>
 			<File

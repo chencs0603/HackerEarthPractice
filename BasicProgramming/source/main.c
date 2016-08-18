@@ -81,6 +81,39 @@ void PalindromicStrTest()
 		printf("NO");
 	}
 }
+//测试乘积
+void ProductTest()
+{
+	bool bRet;
+	long lProduct;
+	int* pnBuf;
+	int nBufLen; 
+	int i;
+	
+	nBufLen = 0;
+	pnBuf = NULL;
+
+	scanf("%d\n", &nBufLen);
+	pnBuf = (int*)malloc(sizeof(int)*nBufLen);//malloc的输入参数是字节数，不是元素个数
+
+	for (i = 0; i < nBufLen; i++)
+	{
+		scanf("%d", &pnBuf[i]);//不能换行
+	}
+
+	bRet = false;
+	bRet = computeProduct(pnBuf, nBufLen, &lProduct);
+	if (bRet)
+	{
+		printf("%d\n", lProduct);
+	}
+	else
+	{
+		printf("error!!!");
+	}
+	
+	
+}
 
 int main()
 {
@@ -88,7 +121,9 @@ int main()
 	
 	//DeathTest();
 
-	PalindromicStrTest();
+	//PalindromicStrTest();
+
+	ProductTest();
 
 	return 0;
 }

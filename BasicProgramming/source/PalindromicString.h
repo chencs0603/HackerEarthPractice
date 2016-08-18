@@ -1,5 +1,5 @@
 #ifndef _PALINDROMICSTRING_H
-#define _TOGGLESTRING_H
+#define _PALINDROMICSTRING_H
 
 
 #ifdef  __cplusplus  
