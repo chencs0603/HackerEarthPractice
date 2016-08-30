@@ -187,6 +187,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\source\ProfilePicture.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\source\ToggleString.c"
 				>
 			</File>
@@ -206,6 +210,10 @@
 			</File>
 			<File
 				RelativePath=".\source\Product.h"
+				>
+			</File>
+			<File
+				RelativePath=".\source\ProfilePicture.h"
 				>
 			</File>
 			<File

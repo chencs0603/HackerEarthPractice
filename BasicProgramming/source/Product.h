@@ -9,8 +9,10 @@ extern "C" {
 
 #include "stdbool.h"
 
-//求乘积
+//计算乘积
 bool computeProduct(int* pnBuf, int nBufLen, long* plProduct);
+//计算阶乘
+bool computeFactorial(int num, int* pnFactorial);
 
 #ifdef  __cplusplus
 }

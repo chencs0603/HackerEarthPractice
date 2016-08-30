@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "Product.h"
 
-//求乘积
+//计算乘积
 bool computeProduct(int* pnBuf, int nBufLen, long* plProduct)
 {	
 	long lTmpProduct;
@@ -28,4 +28,39 @@ bool computeProduct(int* pnBuf, int nBufLen, long* plProduct)
 
 	*plProduct = lTmpProduct;
 	return true;
+}
+
+//计算阶乘
+bool computeFactorial(int num, int* pnFactorial)
+{
+
+	bool bRet;
+	int nFactorial;
+
+	if (NULL == pnFactorial || 0 > num || 10 < num)
+	{
+		return false;
+	}
+
+	if (1 == num)
+	{
+		*pnFactorial = 1;
+		return true;
+	}
+	else
+	{
+		bRet = false;
+		nFactorial = 0;
+
+		bRet = computeFactorial(num - 1, &nFactorial);
+		if (bRet)
+		{
+			*pnFactorial = num * nFactorial;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }

@@ -120,9 +120,7 @@ void ProductTest()
 	else
 	{
 		printf("error!!!");
-	}
-	
-	
+	}	
 }
 
 //测试计算除数的个数
@@ -146,6 +144,66 @@ void CountDivisorsTest()
 	}
 }
 
+//Roy and Profile Picture
+void VerifyPictureSizeTest()
+{
+	bool bRet;
+	int nSquare;
+	int nPhotoNum;
+	int* pnWidthBuf;
+	int* pnHeightBuf;
+	int i;
+	char szRet[0x10];
+	int nRetLen;
+
+	scanf("%d\n", &nSquare);
+	scanf("%d\n", &nPhotoNum);
+
+	pnWidthBuf = (int*)malloc(sizeof(int)*nPhotoNum);
+	pnHeightBuf = (int*)malloc(sizeof(int)*nPhotoNum);
+
+	if (NULL == pnHeightBuf || NULL == pnWidthBuf)
+	{
+		return;
+	}
+
+	for (i = 0; i < nPhotoNum; i++)
+	{
+		scanf("%d %d", &pnWidthBuf[i], &pnHeightBuf[i]);
+	}
+	
+	for (i = 0; i < nPhotoNum; i++)
+	{
+		memset(szRet, 0x00, 0x10);
+		nRetLen = 0x10;
+		bRet = false;
+		bRet = verifyPictureSize(nSquare, pnWidthBuf[i], pnHeightBuf[i], szRet, &nRetLen);
+		printf("%s\n", szRet);
+	}
+}
+
+//测试阶乘
+void FactorialTest()
+{
+	bool bRet;
+	int num;
+	int nFactorial; 
+
+	scanf("%d", &num);
+
+	nFactorial = 0;
+	bRet = false;
+	bRet = computeFactorial(num, &nFactorial);
+	if (bRet)
+	{
+		printf("%d\n", nFactorial);
+	}
+	else
+	{
+		printf("error!!!");
+	}	
+}
+
 int main()
 {
 	//ToggleStringTest();
@@ -156,7 +214,11 @@ int main()
 
 	//ProductTest();
 
-	CountDivisorsTest();
+	//CountDivisorsTest();
+
+	//VerifyPictureSizeTest();
+
+	FactorialTest();
 
 	return 0;
 }
