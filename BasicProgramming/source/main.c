@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include "ToggleString.h"
 #include "PalindromicString.h"
+#include "Product.h"
+#include "CountDivisors.h"
+#include "ProfilePicture.h"
 
 //²âÊÔ×ÖÄ¸·´×ª
 void ToggleStringTest()
@@ -204,6 +207,48 @@ void FactorialTest()
 	}	
 }
 
+//Life, the Universe, and Everything
+void BruteForce()
+{
+	int num;
+	int target = 42;
+
+	while(1)
+	{
+		scanf("%d", &num);
+		if (num != target && num <= 1000 && num > 0)
+		{
+			printf("%d\n", num);
+		}
+		else
+		{
+			break;
+		}
+	}
+}
+
+void BruteForceTest()
+{
+	int pnBuf[10000];
+	int i, j;
+
+	int target = 42;
+
+	i = -1;
+	do 
+	{
+		i++;
+		scanf("%d", &pnBuf[i]);
+	} while (pnBuf[i] != target && pnBuf[i] <= 1000 && pnBuf[i] > 0);
+
+	for (j = 0; j < i; j++)
+	{
+		printf("%d\n", pnBuf[j]);
+	}
+}
+
+
+
 int main()
 {
 	//ToggleStringTest();
@@ -218,7 +263,9 @@ int main()
 
 	//VerifyPictureSizeTest();
 
-	FactorialTest();
+	//FactorialTest();
+
+	BruteForce();
 
 	return 0;
 }
