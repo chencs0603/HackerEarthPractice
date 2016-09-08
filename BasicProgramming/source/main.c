@@ -1,9 +1,9 @@
 #include "BasicIO.h"
+#include "BitManipulation.h"
 
 int main()
 {
 	/***** Basic of Input/Output *****/
-
 
 	//ToggleStringTest();
 	
@@ -22,6 +22,8 @@ int main()
 	//BruteForce();
 
 	/***** Basic of Bit Manipulation *****/
+
+	CountBitsTest();
 
 
 	return 0;

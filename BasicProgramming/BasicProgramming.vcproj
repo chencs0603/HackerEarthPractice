@@ -179,6 +179,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\source\BitManipulation.c"
+				>
+			</File>
+			<File
+				RelativePath=".\source\BitManipulationCommon.c"
+				>
+			</File>
+			<File
 				RelativePath=".\source\main.c"
 				>
 			</File>
@@ -194,6 +202,14 @@
 			</File>
 			<File
 				RelativePath=".\source\BasicIOCommon.h"
+				>
+			</File>
+			<File
+				RelativePath=".\source\BitManipulation.h"
+				>
+			</File>
+			<File
+				RelativePath=".\source\BitManipulationCommon.h"
 				>
 			</File>
 			<File
