@@ -171,27 +171,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\source\CountDivisors.cpp"
+				RelativePath=".\source\BasicIO.c"
+				>
+			</File>
+			<File
+				RelativePath=".\source\BasicIOCommon.c"
 				>
 			</File>
 			<File
 				RelativePath=".\source\main.c"
-				>
-			</File>
-			<File
-				RelativePath=".\source\PalindromicString.c"
-				>
-			</File>
-			<File
-				RelativePath=".\source\Product.c"
-				>
-			</File>
-			<File
-				RelativePath=".\source\ProfilePicture.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\source\ToggleString.c"
 				>
 			</File>
 		</Filter>
@@ -201,27 +189,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\source\CountDivisors.h"
+				RelativePath=".\source\BasicIO.h"
 				>
 			</File>
 			<File
-				RelativePath=".\source\PalindromicString.h"
-				>
-			</File>
-			<File
-				RelativePath=".\source\Product.h"
-				>
-			</File>
-			<File
-				RelativePath=".\source\ProfilePicture.h"
+				RelativePath=".\source\BasicIOCommon.h"
 				>
 			</File>
 			<File
 				RelativePath=".\source\stdbool.h"
-				>
-			</File>
-			<File
-				RelativePath=".\source\ToggleString.h"
 				>
 			</File>
 		</Filter>
