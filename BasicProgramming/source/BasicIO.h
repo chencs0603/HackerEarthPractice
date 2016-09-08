@@ -19,7 +19,7 @@ void VerifyPictureSizeTest();
 
 void FactorialTest();
 
-void BruteForce();
+void BruteForceTest();
 
 
 #ifdef  __cplusplus
