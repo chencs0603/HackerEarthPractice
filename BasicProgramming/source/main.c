@@ -1,6 +1,5 @@
 #include "BasicIO.h"
 #include "BitManipulation.h"
-#include "Implementation.h"
 
 int main()
 {
@@ -20,13 +19,12 @@ int main()
 
 	//FactorialTest();
 
-	//BruteForceTest();
+	//BruteForce();
 
 	/***** Basic of Bit Manipulation *****/
 
-	//CountBitsTest();
+	CountBitsTest();
 
-	DivideNumTest();
 
 	return 0;
 }

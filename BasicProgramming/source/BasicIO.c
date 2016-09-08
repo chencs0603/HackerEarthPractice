@@ -212,7 +212,7 @@ void FactorialTest()
 }
 
 //Life, the Universe, and Everything
-void BruteForceTest()
+void BruteForce()
 {
 	int num;
 	int target = 42;
@@ -231,7 +231,7 @@ void BruteForceTest()
 	}
 }
 
-void BruteForceTestx()
+void BruteForceTest()
 {
 	int pnBuf[10000];
 	int i, j;
